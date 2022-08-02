@@ -1,0 +1,12 @@
+{
+  "name": "Offline Mode warning",
+  "description": "Warning that the server is running in offline mode allowing unauthenticated users to play on the server.",
+  "author": "Vachan MN",
+  "response": "This is only a warning that says your server allows cracked players to join\nThis is not favorable if you want only premium players to join!\n\nTo remove this warning set `online-mode` to `true` in your server.properties file.",
+  "keywords": [
+    "SERVER IS RUNNING IN OFFLINE MODE",
+    "ALLOW CRACKED PLAYERS JOIN",
+    "ALLOW TLAUNCHER PLAYERS"
+  ],
+  "media_links": []
+}

@@ -1,0 +1,5 @@
+{
+  "development": true,
+  "bot_token": "Get your own token",
+  "bot_prefix": "sup!"
+}
