@@ -7,5 +7,6 @@
   },
   "environment": "development",
   "secret_key": "",
-  "allowed_user_ids": []
+  "allowed_user_ids": [],
+  "port": 8000
 }

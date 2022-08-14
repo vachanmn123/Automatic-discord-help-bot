@@ -60,9 +60,9 @@ async def ping(ctx):
 
 # If web is enabled, run the web server
 if json.load(open("config.json"))["enable_web"]:
-    from web.main import app
+    from web.main import run_web
 
-    bot.web_thread = Thread(target=app.run)
+    bot.web_thread = Thread(target=run_web)
     bot.web_thread.start()
 
 # Run the bot

@@ -140,5 +140,5 @@ def unauthorized(e):
     return redirect(url_for("login"))
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+def run_web():
+    app.run(host="0.0.0.0", port=config["port"])
