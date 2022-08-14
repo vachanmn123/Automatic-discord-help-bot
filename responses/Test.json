@@ -1,0 +1,14 @@
+{
+    "name": "Test",
+    "description": "Test Desc",
+    "author": "Test Author",
+    "response": "Test Response",
+    "keywords": [
+        "Test Trigger 1",
+        "Test Trigger 2"
+    ],
+    "media_links": [
+        "MediaLink1",
+        "MediaLink2"
+    ]
+}

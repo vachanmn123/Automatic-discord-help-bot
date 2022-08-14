@@ -4,6 +4,7 @@ from disnake.ext import commands
 import logging
 import json
 from datetime import datetime
+from threading import Thread
 
 # Setup gateway intents
 intents = disnake.Intents.default()
@@ -36,7 +37,6 @@ consoleHandler.setFormatter(
 logger.addHandler(handler)
 logger.addHandler(consoleHandler)
 bot.logger = logger
-
 # Load cogs
 bot.load_extension("cogs.autoResponder")
 
@@ -57,6 +57,13 @@ async def on_message(message):
 async def ping(ctx):
     await ctx.send("Pong!")
 
+
+# If web is enabled, run the web server
+if json.load(open("config.json"))["enable_web"]:
+    from web.main import app
+
+    bot.web_thread = Thread(target=app.run)
+    bot.web_thread.start()
 
 # Run the bot
 bot.run(json.load(open("config.json"))["bot_token"])

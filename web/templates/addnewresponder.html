@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+
+{% block title %}Add New Responder{% endblock %}
+
+{% block content %}
+<h1>Add New Responder</h1>
+<p>Add a new responder to the system.</p>
+<a href="{{url_for('index')}}"><button class="btn btn-default">Back to Home</button></a>
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+        <small>Name for the responder</small>
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" name="description" placeholder="Enter description">
+        <small>Description for the responder</small>
+    </div>
+    <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" class="form-control" id="author" name="author" placeholder="Enter author">
+        <small>Author of the responder</small>
+    </div>
+    <div class="form-group">
+        <label for="response">Response</label>
+        <textarea type="text" class="form-control" id="response" name="response"
+            placeholder="Enter Response"></textarea>
+        <small>Response for the responder.</small>
+    </div>
+    <div class="form-group">
+        <label for="triggers">Triggers</label>
+        <textarea type="text" class="form-control" id="triggers" name="triggers"
+            placeholder="Enter triggers"></textarea>
+        <small>Triggers for the responder. Separate using new lines.</small>
+    </div>
+    <div class="form-group">
+        <label for="medialinks">Media Links</label>
+        <textarea type="text" class="form-control" id="medialinks" name="medialinks"
+            placeholder="Enter media links"></textarea>
+        <small>Media links for the responder. Separate using new lines.</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

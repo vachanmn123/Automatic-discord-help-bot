@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+{% block title %}Add New Responder{% endblock %}
+
+{% block content %}
+<h1>View all Responders</h1>
+<p>View all responders in the system.</p>
+<a href="{{url_for('index')}}"><button class="btn btn-default">Back to Home</button></a>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Author</th>
+            <th scope="col">Response</th>
+            <th scope="col">Triggers<br><small>Seperated by ";"</small></th>
+            <th scope="col">Media Links<br><small>Seperated by ";"</small></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for responder in responders %}
+        <tr>
+            <th scope="row">{{responder['name']}}</th>
+            <td>{{responder['description']}}</td>
+            <td>{{responder['author']}}</td>
+            <td>{{responder['response']}}</td>
+            <td>{{';\n'.join(responder['keywords'])}}</td>
+            <td>{{';\n'.join(responder['media_links'])}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

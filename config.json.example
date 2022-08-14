@@ -1,5 +1,6 @@
 {
   "development": true,
   "bot_token": "Get your own token",
-  "bot_prefix": "sup!"
+  "bot_prefix": "sup!",
+  "enable_web": true
 }
